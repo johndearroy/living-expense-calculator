@@ -10,7 +10,7 @@ A full-stack web application to help UK international students estimate and asse
 
 ```bash
 # 1. Clone the repo
-git clone <repo-url>
+git clone git@github.com:johndearroy/living-expense-calculator.git
 cd living-expense-calculator
 
 # 2. No need to create environment file, .env is already there, just copy

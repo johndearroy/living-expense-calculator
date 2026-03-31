@@ -34,30 +34,9 @@ npm run seed
 
 ---
 
-## Local Development (without Docker)
-
 ### Prerequisites
 - Node.js 25+
 - PostgreSQL 14+
-
-### Backend
-
-```bash
-cd neonexor_backend
-cp .env.example .env        # edit DB credentials
-npm install
-npm run seed                # seed the database
-npm run start:dev           # starts on port 5000
-```
-
-### Frontend
-
-```bash
-cd client
-cp .env.example .env.local  # set NEXT_PUBLIC_API_URL=http://localhost:5000
-npm install
-npm run dev                 # starts on port 3000
-```
 
 ---
 
@@ -67,11 +46,7 @@ The seeder clears and re-inserts all cities, presets, and baselines.
 
 **With Docker (after `docker-compose up`):**
 ```bash
-npm run seed
-```
-OR
-```bash
-sudo docker compose exec backend sh npm run seed:prod
+sudo docker compose exec backend sh npm run seed
 ```
 
 **Without Docker:**

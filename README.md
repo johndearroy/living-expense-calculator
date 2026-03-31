@@ -13,12 +13,15 @@ A full-stack web application to help UK international students estimate and asse
 git clone <repo-url>
 cd living-expense-calculator
 
-# 2. No need to create environment file, .env is already there
+# 2. No need to create environment file, .env is already there, just copy
+cp .env server/.env
+cp .env.client client/.env
 
 # 3. Build and start all three containers
-docker-compose up --build
+sudo docker compose up --build
 
 # 4. Seed the database (run once, in a second terminal)
+sudo docker compose exec backend sh
 npm run seed
 ```
 
@@ -68,7 +71,7 @@ npm run seed
 ```
 OR
 ```bash
-docker-compose exec server npm run seed:prod
+sudo docker compose exec backend sh npm run seed:prod
 ```
 
 **Without Docker:**
